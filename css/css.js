@@ -3,13 +3,16 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#383b40',
+      backgroundColor: '#f6e3c1',
       alignItems: 'center',
       justifyContent: 'center',
-      color: '#fff',
+      color: '#000',
       fontSize: 14
     },
 
+    image: {
+      height: 220
+    },
     alinhamentoCentro: {
       alignItems: 'center',
     },
@@ -23,21 +26,21 @@ const styles = StyleSheet.create({
     mensagem: {
       marginTop: '5%',
       fontSize: 20,
-      color: '#ffffff'
+      color: '#000'
     },
 
     textField: {
       width: 226,
       height: 40,
       borderBottomWidth: 1,
-      color: 'gray',
+      color: '#000',
       alignItems: 'center',
       justifyContent: 'center',
     },
 
     botaoAcessar: {
-      backgroundColor: '#fbd10c',
-      width: '30%',
+      backgroundColor: '#a6de91',
+      width: 200,
       marginTop: '10%',
       marginBottom: '5%',
       paddingVertical: 10,
@@ -51,13 +54,12 @@ const styles = StyleSheet.create({
       marginTop: '5%',
       flexDirection: 'row',
       justifyContent: 'space-around',
-      // alignItems: 'flex-start',
     },
 
     botaoLink: {
       fontWeight: 'bold',
       textDecorationLine: 'underline',
-      color: '#FFFFFF'
+      color: '#000'
     },
   });
 

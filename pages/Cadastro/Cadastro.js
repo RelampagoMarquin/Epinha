@@ -1,14 +1,7 @@
-import {
-  Text,
-  TextInput,
-  View,
-  Image,
-  TouchableOpacity,
-  Switch,
-} from "react-native";
+import { Text, TextInput, View, Image, TouchableOpacity } from "react-native";
 import { styles } from "../../css/css";
 
-export default function Login({ navigation }) {
+export default function Cadastro({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.boasVindas}>
@@ -17,9 +10,15 @@ export default function Login({ navigation }) {
           source={require("../../assets/epinha.png")}
           resizeMode="contain"
         />
-        <Text style={styles.mensagem}>Acessar conta:</Text>
+
+        <Text style={styles.mensagem}>Cadastrar Conta:</Text>
       </View>
       <View style={styles.alinhamentoCentro}>
+        <TextInput
+          style={styles.textField}
+          placeholder="Nome"
+          placeholderTextColor="gray"
+        />
         <TextInput
           style={styles.textField}
           keyboardType="email-address"
@@ -34,18 +33,19 @@ export default function Login({ navigation }) {
           secureTextEntry={true}
         />
 
-        <Switch></Switch>
+        <TextInput
+          style={styles.textField}
+          type="ConfirmedPass"
+          placeholder="Confirme a senha"
+          placeholderTextColor="gray"
+          secureTextEntry={true}
+        />
         <TouchableOpacity style={styles.botaoAcessar}>
-          <Text style={styles.textoBotaoAcessar}>Acessar</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.botoesNovaContaEEsqueceuSenha}>
-        <TouchableOpacity>
-          <Text style={styles.botaoLink}>Esqueci a senha</Text>
+          <Text style={styles.textoBotaoAcessar}>Cadastrar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate("Cadastro")}>
-          <Text style={styles.botaoLink}>Criar nova conta</Text>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Text style={styles.botaoLink}>Cancelar</Text>
         </TouchableOpacity>
       </View>
     </View>
