@@ -40,10 +40,9 @@ export default function Login({ navigation }) {
         </TouchableOpacity>
       </View>
       <View style={styles.botoesNovaContaEEsqueceuSenha}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Recuperar")}>
           <Text style={styles.botaoLink}>Esqueci a senha</Text>
         </TouchableOpacity>
-
         <TouchableOpacity onPress={() => navigation.navigate("Cadastro")}>
           <Text style={styles.botaoLink}>Criar nova conta</Text>
         </TouchableOpacity>

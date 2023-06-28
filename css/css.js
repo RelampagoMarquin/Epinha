@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     botaoLink: {
       fontWeight: 'bold',
       textDecorationLine: 'underline',
-      color: '#000'
+      color: '#000',
+      margin: '2%'
     },
   });
 
